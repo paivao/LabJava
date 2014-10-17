@@ -1,0 +1,13 @@
+#Java Compiled
+*.class
+
+#Mobile
+.mtj.tmp/
+
+# Java Compressed Code
+*.jar
+*.war
+*.ear
+
+#Errors log
+hs_err_pid*
