@@ -27,7 +27,7 @@ public class ConnectionFactory {
 	this.setTcpport("3306");
 	this.setDatabase("labjava");
 	this.setUser("userlabjava");
-	this.setPassword("userlabjava");
+	this.setPassword("1234");
 	
 	conexao = null;
     }
