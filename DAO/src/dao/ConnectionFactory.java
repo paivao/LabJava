@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- *
+ * Fábrica de conexões.
  * @author rafaelpaiva
  */
 public class ConnectionFactory {
@@ -22,6 +22,9 @@ public class ConnectionFactory {
     
     private Connection conexao;
     
+    /**
+     * Construtor default. Cria os atributos para iniciar a conexão.
+     */
     public ConnectionFactory () {
 	this.setServer("localhost");
 	this.setTcpport("3306");
@@ -32,6 +35,12 @@ public class ConnectionFactory {
 	conexao = null;
     }
     
+    /**
+     * Cria uma conexão.
+     * @return Conexão criada.
+     * @throws ClassNotFoundException Caso o driver MySQL seja encontrado.
+     * @throws SQLException Excessão do JDBC.
+     */
     public Connection conexao() throws ClassNotFoundException, SQLException {
 	if (conexao == null) {
 	    Class.forName("com.mysql.jdbc.Driver");
